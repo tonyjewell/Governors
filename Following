@@ -28,4 +28,5 @@ end
 
 File.open("lists/tonyjewell/Governors","w") do |f|
   f.write(list_members_array.to_json)
+  
 end
