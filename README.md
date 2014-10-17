@@ -1,4 +1,0 @@
-Governors
-=========
-
-Governors on Twitter
