@@ -7,7 +7,7 @@ require 'twitter'
 require 'colored'
 require 'pp'
 require 'CSV'
-require 'json'
+require 'json'gr
 
 
 client = Twitter::REST::Client.new do |config|
@@ -49,9 +49,9 @@ def load_user_lib(filename)
 end
 
 
-GROUP = "ca-olympics"
+GROUP = "governors"
 
-accounts_to_check = load_user_lib("lists/#{GROUP}.json")
+accounts_to_check = load_user_lib("lists/#{governors}.json")
 
 MAX_ATTEMPTS = 20
 
@@ -79,7 +79,7 @@ accounts_to_check.each_with_index do |account_username, account_index|
       friends_hash[friend] += 1
     end
 
-    File.open("dumps/#{GROUP}.json","w") do |f|
+    File.open("dumps/#{governors}.json","w") do |f|
       f.write(friends_hash.to_json)
     end
 
